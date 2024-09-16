@@ -1,0 +1,282 @@
+/* General Styles */
+html, body {
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+    margin: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9; /* Light background */
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h1, h2 {
+    color: #b89b5e; /* Gold color for headings */
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 30px;
+}
+
+/* Header Styles */
+header {
+    background-color: #b89b5e; /* Gold background */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+
+}
+
+header p {
+    font-size: 1.3em;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+#about {
+    padding: 40px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 20px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+
+.about-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #b89b5e;
+}
+.about-text a{
+    color: #333;
+}
+.about-text a:hover{
+    color: red;
+}
+
+/* Section Styles */
+section {
+    width: 85%;
+    padding: 40px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Experience Section */
+#experience {
+    padding: 40px;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.experience-item p {
+    margin: 5px 0;
+}
+
+/* Skills Section */
+#skills {
+    padding: 40px;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+#skills li {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#skills li strong {
+    display: block;
+    font-size: 1.1em;
+    color: #333;
+}
+
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 900px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    section {
+        margin: 10px;
+        margin-left: 40px;
+        padding: 15px;
+        width: 80%;
+    }
+
+    footer {
+        font-size: 0.85em;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        margin-right: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    section {
+        margin: 10px;
+        margin-left: 40px;
+        padding: 15px;
+        width: 75%;
+    }
+}
+
+@media (max-width: 675px) {
+    section {
+        margin: 10px;
+        margin-left: 40px;
+        padding: 15px;
+        width: 75%;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        margin: 10px;
+        margin-left: 45px;
+        padding: 15px;
+        width: 70%;
+    }
+}
+
+@media (max-width: 550px) {
+    section {
+        margin: 10px;
+        margin-left: 40px;
+        padding: 15px;
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+        width: 75%;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        margin-right: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
